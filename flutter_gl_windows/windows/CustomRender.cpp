@@ -125,7 +125,7 @@ void CustomRender::initGL() {
   GLuint colorRenderBuffer = 0;
   glGenRenderbuffers(1, &colorRenderBuffer);
   glBindRenderbuffer(GLenum(GL_RENDERBUFFER), colorRenderBuffer);
-  glRenderbufferStorage(GLenum(GL_RENDERBUFFER), GLenum(GL_DEPTH32_STENCIL8), GLsizei(width), GLsizei(height));
+  glRenderbufferStorage(GLenum(GL_RENDERBUFFER), GLenum(GL_DEPTH32F_STENCIL8), GLsizei(width), GLsizei(height));
   
   glFramebufferTexture2D(GLenum(GL_FRAMEBUFFER), GLenum(GL_COLOR_ATTACHMENT0), GLenum(GL_TEXTURE_2D), texture, 0);
   
